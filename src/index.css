@@ -113,6 +113,7 @@ main {
 }
 
 .main-pricing,
+.main-not-found,
 .main-about {
   background-color: white;
   color: #666;
@@ -122,6 +123,7 @@ main {
 }
 
 .main-pricing section,
+.main-not-found section,
 .main-about section {
   display: flex;
   align-items: center;
@@ -135,6 +137,7 @@ main {
 }
 
 .main-pricing h1,
+.main-not-found h1,
 .main-about h1 {
   font-size: 5rem;
   font-weight: 800;

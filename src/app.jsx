@@ -113,12 +113,26 @@ const About = () => (
   </>
 )
 
+const NotFound = () => (
+  <>
+    <main className="main-not-found">
+      <section>
+        <h1>Página não encontrada</h1>
+        <Link to="/" className="cta">
+          Voltar ao início
+        </Link>
+      </section>
+    </main>
+  </>
+)
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
       <Route path="/" element={<Home />} />
       <Route path="pricing" element={<Pricing />} />
       <Route path="about" element={<About />} />
+      <Route path="*" element={<NotFound />} />
     </Route>,
   ),
 )
