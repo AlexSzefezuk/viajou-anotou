@@ -33,7 +33,7 @@ const Header = () => {
           <li>
             <NavLink
               className={location.pathname !== '/' && 'dark'}
-              to="/pricing"
+              to="/preco"
             >
               PREÇO
             </NavLink>
@@ -41,7 +41,7 @@ const Header = () => {
           <li>
             <NavLink
               className={location.pathname !== '/' && 'dark'}
-              to="/about"
+              to="/sobre"
             >
               SOBRE
             </NavLink>
@@ -65,7 +65,7 @@ const Home = () => (
           Um mapa mundial que rastreia por onde você passou. Nunca esqueça suas
           experiências e mostre aos seus amigos o quê você fez pelo mundo.
         </h2>
-        <Link to="about" className="cta">
+        <Link to="sobre" className="cta">
           COMEÇAR AGORA
         </Link>
       </section>
@@ -130,8 +130,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
       <Route path="/" element={<Home />} />
-      <Route path="pricing" element={<Pricing />} />
-      <Route path="about" element={<About />} />
+      <Route path="preco" element={<Pricing />} />
+      <Route path="sobre" element={<About />} />
       <Route path="*" element={<NotFound />} />
     </Route>,
   ),
