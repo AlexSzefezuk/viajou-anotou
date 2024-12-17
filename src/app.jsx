@@ -46,6 +46,13 @@ const Header = () => {
               SOBRE
             </NavLink>
           </li>
+          <li>
+            {location.pathname !== '/login' && (
+              <NavLink className="cta" to="/login">
+                LOGIN
+              </NavLink>
+            )}
+          </li>
         </ul>
       </nav>
     </header>
@@ -113,6 +120,27 @@ const About = () => (
   </>
 )
 
+const Login = () => (
+  <>
+    <Header />
+    <main className="main-login">
+      <section>
+        <form className="form-login">
+          <label>
+            Email
+            <input type="text" placeholder="email@email.com.br" />
+          </label>
+          <label>
+            Senha
+            <input type="password" placeholder="**********" />
+          </label>
+          <button>Login</button>
+        </form>
+      </section>
+    </main>
+  </>
+)
+
 const NotFound = () => (
   <>
     <main className="main-not-found">
@@ -132,6 +160,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="preco" element={<Pricing />} />
       <Route path="sobre" element={<About />} />
+      <Route path="login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </Route>,
   ),
